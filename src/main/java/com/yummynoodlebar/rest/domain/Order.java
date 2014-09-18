@@ -56,7 +56,10 @@ public class Order implements Serializable {
 
     details.setOrderItems(items);
     details.setKey(key);
-    details.setDateTimeOfSubmission(dateTimeOfSubmission);
+    if (dateTimeOfSubmission != null)
+    	details.setDateTimeOfSubmission(dateTimeOfSubmission);
+    else
+    	details.setDateTimeOfSubmission(new Date());
 
     return details;
   }
