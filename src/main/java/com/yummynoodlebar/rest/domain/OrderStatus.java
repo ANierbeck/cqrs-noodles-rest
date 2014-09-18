@@ -2,15 +2,21 @@ package com.yummynoodlebar.rest.domain;
 
 import com.yummynoodlebar.core.events.orders.OrderStatusDetails;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 import java.util.UUID;
 
+@XmlRootElement
 public class OrderStatus {
 
+  @XmlElement
   private UUID orderId;
 
+  @XmlElement
   private Date statusDate;
 
+  @XmlElement
   private String status;
 
   public static OrderStatus fromOrderStatusDetails(UUID key, OrderStatusDetails orderDetails) {
