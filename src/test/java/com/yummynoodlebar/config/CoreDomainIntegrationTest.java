@@ -1,5 +1,6 @@
 package com.yummynoodlebar.config;
 
+import com.yummynoodlebar.config.CoreConfig;
 import com.yummynoodlebar.core.events.orders.AllOrdersEvent;
 import com.yummynoodlebar.core.events.orders.CreateOrderEvent;
 import com.yummynoodlebar.core.events.orders.OrderDetails;
@@ -20,6 +21,9 @@ public class CoreDomainIntegrationTest {
   @Autowired
   OrderService orderService;
 
+  //TODOCUMENT We have already asserted the correctness of the collaboration.
+  //This is to check that the wiring in CoreConfig works.
+  //We do this by inference.
   @Test
   public void addANewOrderToTheSystem() {
 

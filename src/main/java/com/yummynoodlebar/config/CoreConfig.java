@@ -14,6 +14,7 @@ import java.util.UUID;
 @Configuration
 public class CoreConfig {
 
+
   @Bean
   public OrderService createService(OrdersRepository repo) {
     return new OrderEventHandler(repo);
@@ -23,4 +24,5 @@ public class CoreConfig {
   public OrdersRepository createRepo() {
     return new OrdersMemoryRepository(new HashMap<UUID, Order>());
   }
+
 }
